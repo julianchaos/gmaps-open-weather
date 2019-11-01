@@ -1,0 +1,21 @@
+<div>
+    <div id="current" *ngIf="current">
+        <h3>Atual</h3>
+
+        Temperatura: {{current.temp}}º <br>
+        Mín.: {{ current.temp_min }}º - Max.: {{ current.temp_max }}º <br>
+        Umidade: {{ current.humidity }} <br>
+        Pressão: {{ current.pressure }}
+    </div>
+
+    <div id="forecast" *ngIf="forecast">
+        <h3>Previsão</h3>
+
+        <span *ngFor="let item of forecast">
+            <h4>{{item.dt_txt | date:'medium'}}</h4>
+            Temperatura: {{item.main.temp}}º <br>
+            Umidade: {{ item.main.humidity }} <br>
+            Pressão: {{ item.main.pressure }}
+        </span>
+    </div>
+</div>

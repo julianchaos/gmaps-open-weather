@@ -11,6 +11,7 @@ import { MatButtonModule } from '@angular/material/button';
 
 import { AppComponent } from './app.component';
 import { SearchComponent } from './component/search/search.component';
+import { OpenWeatherComponent } from './component/open-weather/open-weather.component';
 
 import { GoogleMapsClientService } from './service/google-maps-client.service';
 import { OpenWeatherClientService } from './service/open-weather-client.service';
@@ -19,7 +20,8 @@ import { AddressPoolService } from './service/address-pool.service';
 @NgModule({
 	declarations: [
 		AppComponent,
-		SearchComponent
+		SearchComponent,
+		OpenWeatherComponent
 	],
 	imports: [
 		BrowserModule,
