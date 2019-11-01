@@ -1,0 +1,12 @@
+<form #form>
+    <mat-form-field>
+        <input matInput placeholder="Endereço" [matAutocomplete]="auto" [formControl]="addressCtrl">
+        <mat-autocomplete #auto="matAutocomplete" (optionSelected)="onSubmit()">
+            <mat-option *ngFor="let address of filteredAddress | async" [value]="address">
+                <span>{{ address }}</span>
+            </mat-option>
+        </mat-autocomplete>
+    </mat-form-field>
+
+    <button mat-raised-button (click)="onSubmit()">Buscar endereço</button>
+</form>
