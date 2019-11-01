@@ -8,7 +8,7 @@ import { environment } from '../../environments/environment';
 export class OpenWeatherClientService {
 
 	private get url() {
-		return 'http://api.openweathermap.org/data/2.5';
+		return 'https://api.openweathermap.org/data/2.5';
 	}
 
 	constructor(
